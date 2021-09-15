@@ -566,7 +566,9 @@ class CdlItem
 
         if (isset($this->part)) {
             $item['part'] = $this->part;
-            $item['partTotal'] = $this->partTotal;
+            if (isset($this->partTotal)) {
+                $item['partTotal'] = $this->partTotal;
+            }
             if (isset($this->partDesc)) {
                 $item['partDesc'] = $this->partDesc;
             }
